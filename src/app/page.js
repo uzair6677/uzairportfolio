@@ -1,6 +1,7 @@
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import ProjectSection from "./components/ProjectSection";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black    mx-auto py-12 ">
@@ -9,6 +10,7 @@ export default function Home() {
     
       <HeroSection />
       <AboutSection />
+      <ProjectSection />
       </div>
     </main>
   );

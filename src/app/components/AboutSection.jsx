@@ -44,15 +44,12 @@ const Tab_Data = [
         <li>
           During my frontend development internship, I assisted in building and
           maintaining user interfaces using HTML, CSS, and JavaScript. I worked
-          closely with senior developers to implement responsive and interactive
-          web designs, ensuring cross-browser compatibility and mobile
-          optimization. I participated in code reviews, contributed to improving
-          UI/UX, and resolved bugs and layout issues. I also gained experience
-          in integrating RESTful APIs and handling asynchronous data using
-          JavaScript. Throughout the internship, I used Git and GitHub for
-          version control and collaborated effectively within a team
-          environment, further strengthening my understanding of real-world web
-          development practices.
+          closely with senior developers to implement responsive a. I also
+          gained experience in integrating RESTful APIs and handling
+          asynchronous data using JavaScript. Throughout the internship, I used
+          Git and GitHub for version control and collaborated effectively within
+          a team environment, further strengthening my understanding of
+          real-world web development practices.
         </li>
       </ul>
     ),
@@ -75,7 +72,7 @@ const AboutSection = () => {
           width={500}
           height={500}
         />{" "}
-        <div>
+        <div className="mt-4 md:mt-0 text-left  flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
           <p className="text-base lg:text-lg">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -83,15 +80,9 @@ const AboutSection = () => {
             cupiditate nesciunt vel perspiciatis, omnis harum possimus est
             autem, incidunt placeat. Ut temporibus repellendus, sed reiciendis
             quasi, necessitatibus obcaecati suscipit quaerat voluptatum itaque
-            in unde debitis illum impedit et quisquam molestias eveniet adipisci
-            laboriosam perspiciatis recusandae. Cum amet nihil quae veritatis
-            quam totam sunt in eum temporibus architecto rerum, libero saepe,
-            ipsum commodi ducimus quia! Sed veniam consequatur vel ad iure
-            accusamus laudantium? Exercitationem aspernatur magnam magni nemo
-            fugit porro accusamus reprehenderit eum ex blanditiis, corrupti
-            pariatur eveniet similique accusantium at error ab possimus?
+            in unde debitis
           </p>
-          <div className="flex flex-row mt-8">
+          <div className="flex flex-row  justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -121,3 +112,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+ 
