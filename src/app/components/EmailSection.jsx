@@ -1,10 +1,47 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
 import GIthubIcon from "../../../public/icons8-github.svg";
 import linkedinIcon from "../../../public/icons8-linkedin.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 const EmailSection = () => {
+  const [emailSubmitted,setEmailSubmitted]=useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    };
+
+    const JSONdata = JSON.stringify(data);
+    const endpoint = '/api/send';
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSONdata,
+    };
+
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
+      console.log(resData);
+
+      if (response.status === 200) {
+        console.log('Message sent successfully');
+        setEmailSubmitted(true)
+      } else {
+        console.error('Message sending failed');
+      }
+    } catch (err) {
+      console.error('Error:', err);
+    }
+  };
+
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4">
       <div>
@@ -23,12 +60,13 @@ const EmailSection = () => {
       </div>
 
       <div>
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="email" className="text-white mb-2 block text-sm font-medium">
               Your email
             </label>
             <input
+              name="email"
               type="email"
               id="email"
               required
@@ -42,6 +80,7 @@ const EmailSection = () => {
               Subject
             </label>
             <input
+              name="subject"
               type="text"
               id="subject"
               required
@@ -66,11 +105,12 @@ const EmailSection = () => {
 
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-medium px-6 py-2 rounded hover:bg-blue-600 transition-all"
+            className="bg-purple-500 hover:bg-purple-600 text-white font-medium px-6 py-2 rounded transition-all"
           >
             Send Message
           </button>
         </form>
+        {emailSubmitted&&(<p className="text-green-500 text-sm mt-2">email submitted succeessfully</p>)}
       </div>
     </section>
   );
