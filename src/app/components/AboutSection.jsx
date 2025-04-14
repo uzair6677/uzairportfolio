@@ -17,6 +17,7 @@ const Tab_Data = [
         <li>React</li>
 
         <li>Tailwind CSS</li>
+        <li>redux</li>
 
         <li>Git</li>
 
@@ -67,7 +68,7 @@ const AboutSection = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
-          src="/assets/images/hero-image.jpg"
+          src="/assets/images/hero-image.png"
           alt="about me"
           width={500}
           height={500}
@@ -75,12 +76,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left  flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Accusantium ipsa iure esse eveniet facilis reprehenderit corporis,
-            cupiditate nesciunt vel perspiciatis, omnis harum possimus est
-            autem, incidunt placeat. Ut temporibus repellendus, sed reiciendis
-            quasi, necessitatibus obcaecati suscipit quaerat voluptatum itaque
-            in unde debitis
+            I'm a passionate frontend developer with 1 years of experience
+            building web applications using React, Next.js, and modern
+            JavaScript ecosystems. I specialize in creating fast, scalable, and
+            maintainable frontend architectures.
           </p>
           <div className="flex flex-row  justify-start mt-8">
             <TabButton
@@ -99,7 +98,7 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("experience")}
               active={tab === "experience"}
             >
-              certification
+              experience
             </TabButton>
           </div>
           <div className="mt-8">
@@ -112,4 +111,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
- 

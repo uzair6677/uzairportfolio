@@ -5,32 +5,33 @@ import { HiMiniXMark } from "react-icons/hi2";
 import MenuOverlay from "./MenuOverlay";
 import NavLink from "./NavLink";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavLinks = [
   {
     title: "About",
-    path: "/about",
+    path: "#about",
   },
   {
     title: "Projects",
-    path: "/projects",
+    path: "#projects",
   },
   {
     title: "Contacts",
-    path: "/contact",
+    path: "#contact",
   },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setnavbarOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed top-0 left-0 right-0 z-10 py-4 bg-[#121212] bg-opacity-100">
       <div className="flex flex-wrap  item-center justify-between mx-auto px-6">
         <Link
           href="/"
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          <Image src='/assets/images/portfolio.png' width={30} height={30}  alt='pf'/>
         </Link>
         <div className="mobile-menu block  md:hidden">
           {!navbarOpen ? (

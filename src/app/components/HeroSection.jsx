@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
@@ -15,24 +15,20 @@ const HeroSection = () => {
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "uzair tariq",
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
-              "web developer",
+              "uzair tariq ",
               1000,
-              "backend developer",
-              
-              
+              "Frontend Developer | React & Next.js Specialist",1000
             ]}
             wrapper="span"
             speed={50}
-             className="text-4xl sm:text-xl md:text-xl"
+            className="text-4xl sm:text-xl md:text-xl"
             repeat={Infinity}
           />
         </h1>
         <p className="text-[#ADB7BE] w-full text-lg lg:text-xl mb-6 ">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur
-          explicabo, at iure impedit neque aliquid a saepe quia laudantium
-          assumenda.
+          I build performant, accessible, and beautiful web applications with
+          modern technologies. Passionate about creating intuitive user
+          experiences with clean, efficient code.
         </p>
         <div>
           <button className="px-6 py-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 sm:w-fit w-full sm:fit mr-4 bg-white hover:bg-slate-200 rounded-full text-white">
