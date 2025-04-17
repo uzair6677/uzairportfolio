@@ -45,10 +45,10 @@ const HeroSection = () => {
       <div className="col-span-5 place-self-center mt-4 lg:mt-0 px-4">
         <div className="rounded-full bg-indigo-950 w-[400px] h-[400px] lg:w-[400px] lg:h-[400px]  relative">
           <Image
-            src="/assets/images/aboutimage.jpg"
+            src="/assets/images/download.png"
             width={250}
-            height={250}
-            className="absolute transform -translate-x-1/2 -translate-y-1/2 mt-4 top-1/2 left-1/2"
+            height={200}
+            className="absolute transform -translate-x-1/2 -translate-y-1/2 mt-4 top-1/3 left-1/2"
             alt="my-image"
           />
         </div>
