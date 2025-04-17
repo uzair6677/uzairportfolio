@@ -31,7 +31,7 @@ const HeroSection = () => {
           experiences with clean, efficient code.
         </p>
         <div>
-          <button className="px-6 py-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 sm:w-fit w-full sm:fit mr-4 bg-white hover:bg-slate-200 rounded-full text-white">
+          {/* <button className="px-6 py-3 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 sm:w-fit w-full sm:fit mr-4 bg-white hover:bg-slate-200 rounded-full text-white">
             Hire Me
           </button>
           <button className="sm:w-fit px-1 py-1 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 w-full bg-transparent hover:bg-slate-800 mt-3 text-white rounded-full ">
@@ -39,11 +39,11 @@ const HeroSection = () => {
               {" "}
               Download CV
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="col-span-5 place-self-center mt-4 lg:mt-0 px-4">
-        <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]  relative">
+        <div className="rounded-full bg-indigo-950 w-[400px] h-[400px] lg:w-[400px] lg:h-[400px]  relative">
           <Image
             src="/assets/images/hero-image.jpg"
             width={250}

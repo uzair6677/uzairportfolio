@@ -41,7 +41,7 @@ const ProjectSection = () => {
   const filteredProject=projectData.filter((project)=>project.tag.includes(tag));
   return (
     <div>
-      <h1>My Projects</h1>
+      <h1 className="text-white">My Projects</h1>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag
           onClick={handleTagChange}
