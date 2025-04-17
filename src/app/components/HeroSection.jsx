@@ -45,7 +45,7 @@ const HeroSection = () => {
       <div className="col-span-5 place-self-center mt-4 lg:mt-0 px-4">
         <div className="rounded-full bg-indigo-950 w-[400px] h-[400px] lg:w-[400px] lg:h-[400px]  relative">
           <Image
-            src="/assets/images/hero-image.jpg"
+            src="/assets/images/aboutimage.jpg"
             width={250}
             height={250}
             className="absolute transform -translate-x-1/2 -translate-y-1/2 mt-4 top-1/2 left-1/2"
