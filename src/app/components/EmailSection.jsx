@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import GIthubIcon from "../../../public/icons8-github.svg";
 import linkedinIcon from "../../../public/icons8-linkedin.svg";
+import { TbBrandWhatsappFilled } from "react-icons/tb";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,12 +44,13 @@ const EmailSection = () => {
   };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4">
+    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 px-6 " id='contact'>
       <div>
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I'm currently looking for new opportunities. My inbox is always open — whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
+        <span className='text-white  flex flex-row text-center gap-3 '> <TbBrandWhatsappFilled className="text-green-700  "/> <p>923435366677</p></span>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/uzair6677" target="_blank">
             <Image src={GIthubIcon} alt="GitHub icon" />
@@ -105,7 +107,7 @@ const EmailSection = () => {
 
           <button
             type="submit"
-            className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium px-6 py-2 rounded transition-all"
+            className="bg-red-500 hover:bg-red-700 text-white font-medium px-6 py-2 rounded transition-all"
           >
             Send Message
           </button>

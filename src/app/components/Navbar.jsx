@@ -25,13 +25,13 @@ const NavLinks = [
 const Navbar = () => {
   const [navbarOpen, setnavbarOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 py-4 bg-indigo-950 bg-opacity-100">
+    <nav className="fixed top-0 left-0 right-0 z-10 py-4 bg-black bg-opacity-100">
       <div className="flex flex-wrap  item-center justify-between mx-auto px-6">
         <Link
           href="/"
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          <Image src='/assets/images/portfolio.png' width={30} height={30}  alt='pf'/>
+          <Image src='/assets/images/portfolio.png' width={60} height={60}  alt='pf'/>
         </Link>
         <div className="mobile-menu block  md:hidden">
           {!navbarOpen ? (

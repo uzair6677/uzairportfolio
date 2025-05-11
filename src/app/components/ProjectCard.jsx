@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description,gitUrl , previewUrl }) => {
   return (
-    <div>
+    <div className="px-3">
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
+        className=" md:h-72 py-3 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
         {/* Overlay div - contains both the dark background and the centered icon */}
@@ -29,7 +29,7 @@ const ProjectCard = ({ imgUrl, title, description,gitUrl , previewUrl }) => {
           </Link>
         </div>
       </div>
-      <div className="text-white mb-3 rounded-b-xl bg-indigo-950 opacity-100 py-6 px-4">
+      <div className="text-white mb-3 rounded-b-xl bg-black opacity-100 py-6 px-4">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>

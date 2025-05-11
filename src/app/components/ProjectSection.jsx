@@ -17,7 +17,7 @@ const projectData = [
     id: 2,
     title: "Portfoli Website in Next.js",
     description: "Project 1 description",
-    image: "/assets/images/projects/2.jpg",
+    image: "/assets/images/projects/2.avif",
     tag: ["All", ],
     gitUrl: "/",
     previewUrl: "/",
@@ -26,7 +26,7 @@ const projectData = [
     id: 3,
     title: "Portflio Website in Next.js",
     description: "Project 1 description",
-    image: "/assets/images/projects/1.jpg",
+    image: "/assets/images/projects/3.jpg",
     tag: ["All"],
     gitUrl: "/",
     previewUrl: "/",
@@ -40,8 +40,8 @@ const ProjectSection = () => {
   };
   const filteredProject=projectData.filter((project)=>project.tag.includes(tag));
   return (
-    <div>
-      <h1 className="text-white">My Projects</h1>
+    <div id='projects'>
+      <h1 className="text-white text-center">My Projects</h1>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6 ">
         <ProjectTag
           onClick={handleTagChange}
