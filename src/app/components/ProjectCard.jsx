@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description,gitUrl , previewUrl }) => {
   return (
-    <div className="px-3">
+    <div className="px-3 ">
       <div
-        className=" md:h-72 py-3 rounded-t-xl relative group"
+        className="h-60 md:h-72 py-3 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
         {/* Overlay div - contains both the dark background and the centered icon */}

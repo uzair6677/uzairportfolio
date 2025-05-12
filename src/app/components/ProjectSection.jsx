@@ -54,7 +54,7 @@ const ProjectSection = () => {
          isSelected={tag === "Web"}
         />
       </div>
-      <div>
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         {filteredProject.map((project) => (
           <ProjectCard
             key={project.id}

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import GIthubIcon from "../../../public/icons8-github.svg";
 import linkedinIcon from "../../../public/icons8-linkedin.svg";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const EmailSection = () => {
-  const [emailSubmitted,setEmailSubmitted]=useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -18,11 +18,11 @@ const EmailSection = () => {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = '/api/send';
+    const endpoint = "/api/send";
     const options = {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSONdata,
     };
@@ -33,29 +33,50 @@ const EmailSection = () => {
       console.log(resData);
 
       if (response.status === 200) {
-        console.log('Message sent successfully');
-        setEmailSubmitted(true)
+        console.log("Message sent successfully");
+        setEmailSubmitted(true);
       } else {
-        console.error('Message sending failed');
+        console.error("Message sending failed");
       }
     } catch (err) {
-      console.error('Error:', err);
+      console.error("Error:", err);
     }
   };
 
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 px-6 " id='contact'>
-      <div>
+    <>
+     <p className="text-white text-2xl text-center">Contact US</p>
+    <section
+      className="grid md:grid-cols-2 my-3 md:my-2 py-6 gap-4 px-6 "
+      id="contact"
+    >
+     
+      <div className="flex flex-col justify-around py-4 ">
+       <div className="">
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I'm currently looking for new opportunities. My inbox is always open — whether you have a question or just want to say hi, I'll try my best to get back to you!
-        </p>
-        <span className='text-white  flex flex-row text-center gap-3 '> <TbBrandWhatsappFilled className="text-green-700  "/> <p>923435366677</p></span>
-        <div className="socials flex flex-row gap-2">
+          I'm currently looking for new opportunities. My inbox is always open —
+          whether you have a question or just want to say hi, I'll try my best
+          to get back to you!
+        </p></div>
+       <div className=" py-4"> <span className="text-white flex flex-row items-center  gap-3 text-lg">
+          <TbBrandWhatsappFilled className="text-green-700 text-2xl" />
+          <p>923435366677</p>
+        </span></div>
+
+        <div className="py-4">
+          <a href='my-cv.pdf' download><button className="text-white hover:bg-red-700 bg-red-500 py-3 px-2 rounded-xl ">
+            Download cv
+          </button></a>
+        </div>
+        <div className="socials flex flex-row gap-2 py-4">
           <Link href="https://github.com/uzair6677" target="_blank">
             <Image src={GIthubIcon} alt="GitHub icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/uzair-tariq-3472b1339/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/uzair-tariq-3472b1339/"
+            target="_blank"
+          >
             <Image src={linkedinIcon} alt="LinkedIn icon" />
           </Link>
         </div>
@@ -64,7 +85,10 @@ const EmailSection = () => {
       <div>
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label htmlFor="email" className="text-white mb-2 block text-sm font-medium">
+            <label
+              htmlFor="email"
+              className="text-white mb-2 block text-sm font-medium"
+            >
               Your email
             </label>
             <input
@@ -78,7 +102,10 @@ const EmailSection = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="subject" className="text-white block mb-2 text-sm font-medium">
+            <label
+              htmlFor="subject"
+              className="text-white block mb-2 text-sm font-medium"
+            >
               Subject
             </label>
             <input
@@ -92,7 +119,10 @@ const EmailSection = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="message" className="text-white block text-sm mb-2 font-medium">
+            <label
+              htmlFor="message"
+              className="text-white block text-sm mb-2 font-medium"
+            >
               Message
             </label>
             <textarea
@@ -107,14 +137,19 @@ const EmailSection = () => {
 
           <button
             type="submit"
-            className="bg-red-500 hover:bg-red-700 text-white font-medium px-6 py-2 rounded transition-all"
+            className="bg-red-500 hover:bg-red-700 text-white font-medium px-6 py-2 rounded-4xl transition-all"
           >
             Send Message
           </button>
         </form>
-        {emailSubmitted&&(<p className="text-green-500 text-sm mt-2">email submitted succeessfully</p>)}
+        {emailSubmitted && (
+          <p className="text-green-500 text-sm mt-2">
+            email submitted succeessfully
+          </p>
+        )}
       </div>
     </section>
+    </>
   );
 };
 
